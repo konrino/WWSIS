@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Portfolio</title>
+	<meta name="description" content="Blog o ładnych zdjęciach">
+	<meta name="keywords" content="Zdjęcia,fotografia,fotografie,tapety">
+	<meta name="author" content="Konrad Nowak">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+	
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-sm">
+      <a class="navbar-brand" href="index.html"> <i class="small material-icons">camera_alt</i> Fotka.pl </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="przełącznik nawigacji">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainmenu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+              </li>
+							<li class="nav-item">
+								<a class="nav-link" href="portfolio.html"> Portfolio </a>
+								</li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html"> About Me </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html"> Blog </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+    </nav>
+  </header>
+
+	<main>
+
+
+		      <body onload="zegarek()">
+
+		<section class="zdjecia">
+
+			<div class="container">
+
+				<header>
+
+					<h1>Znajdziesz nas tutaj</h1>
+					<p>Na dole widnieje mapa z adresem pod którym możesz nas znaleźć</p>
+
+				</header>
+
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.357540394152!2d17.025603015913894!3d51.10186314809358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc32f2ee95929%3A0x4fca716c4000eca0!2sFotograf!5e0!3m2!1sen!2spl!4v1560367213295!5m2!1sen!2spl" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+						<h2>Formularz kontaktowy</h2>
+						<div id="send_form_status">
+						</div>
+						<form method="post" action="/send_form.php" id="contact_form">
+					     <div><label for="name">Imię i nazwisko</label></div>
+					     <div><input type="text" name="name" id="name" class="formField" /></div>
+					     <div><label for="email">Adres email</label></div>
+					     <div><input type="text" name="email" id="email" class="formField" /></div>
+					     <div><label for="message">Treść wiadomości</label></div>
+					     <div><textarea name="message" id="message" class="formField"></textarea></div>
+					     <div><button id="sendBtn">Wyślij</button></div>
+	 					</form>
+
+
+
+			</div>
+
+		</section>
+
+	</main>
+    <footer>
+       <div style="border-top: 1px solid #524f4f; height: 10px; margin-top: 20px;"></div>
+       <div style="display: flex; width: 92%; margin: 0 auto; padding-top: 5px;">
+        <div id="zegar" style="color: #524f4f; flex: 1; font-size: 12px;"></div>
+            <div style="flex: 1;">
+               <p style=" color: #524f4f; font-size: 12px; text-align: right;">
+                   Autor:
+    <br>           Konrad Nowak
+               </p>
+            </div>
+        </div>
+    </footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("html").on("submit","#contact_form",function(e){
+    e.preventDefault();
+    $("#send_form_status").html('').hide();
+    var data=$("#contact_form").serialize();
+    $.post("/send_form.php",data,function(res){
+      $("#send_form_status").html(res.msg).show();
+      if(res.status==1){
+        $("#contact_form")[0].reset();
+      }
+    });
+  });
+});
+</script>
+
+
+
+<script>
+			function zegarek()
+			{
+					var data = new Date();
+					var godzina = data.getHours();
+					var minuta = data.getMinutes();
+					var sekunda = data.getSeconds();
+					var dzien = data.getDate();
+					var dzienN = data.getDay();
+					var miesiac = data.getMonth();
+					var rok = data.getFullYear();
+
+					if (minuta < 10) minuta = "0" + minuta;
+					if (sekunda < 10) sekunda = "0" + sekunda;
+
+					var dni = new Array("niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota");
+					var miesiace = new Array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia");
+
+					var pokazDate = "Dzisiaj jest " + dni[dzienN] + ', ' + dzien + ' ' + miesiace[miesiac] + ' ' + rok + " roku.<br />Godzina " + godzina + ':' + minuta + ':' + sekunda;
+					document.getElementById("zegar").innerHTML = pokazDate;
+
+					setTimeout(zegarek, 1000);
+			}
+	</script>
+</body>
+</html>
