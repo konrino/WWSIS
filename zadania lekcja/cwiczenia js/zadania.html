@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+     <meta charset="utf-8">
+     <title>Moja witryna</title>
+
+     <meta name="description" content="Opis zawartości strony dla wyszukiwarek">
+     <meta name="keywords" content="słowa, kluczowe, opisujące, zawartość">
+     <meta name="author" content="Jan Programista">
+
+     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+     <link rel="stylesheet" href="arkusz.css">
+     <script src="script.js"></script>
+
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    zad 1
+          var zmienna = prompt('Czy liczba jest parzysta?');
+          if(zmienna%2 == 0)
+          document.write('Liczba jest parzysta');
+
+          if(zmienna%2 == 1)
+          document.write('Liczba jest nieparzysta');
+
+    zad. 2
+          var a = parseInt(prompt("Podaj liczbe a"));
+           b = parseInt(prompt("Podaj liczbe b"));
+          if(a>b){
+            document.write('a jest wieksze od b');
+          } else {
+            document.write('b jest wieksze od a');
+          }
+
+    zad. 3
+          var a = parseInt(prompt("Podaj liczbe a"));
+           b = parseInt(prompt("Podaj liczbe b"));
+          if(a<b){
+            document.write('a jest mniejsze od b');
+          } else {
+            document.write('b jest mniejsze od a');
+          }
+
+    zad. 4
+          var a = parseInt(prompt("Podaj liczbe a"));
+           b = parseInt(prompt("Podaj liczbe b"));
+          if(a>0){
+            document.write('a jest wieksze od 0 oraz ');
+          } else {
+            document.write('a jest mniejsze od 0 oraz ');
+          }
+
+          if(b>0){
+            document.write('b jest wieksze od 0 ');
+          } else {
+            document.write('b jest mniejsza od 0 ')
+          }
+
+
+
+    zad 5.
+            var zmienna = prompt("podaj ocene");
+        if (zmienna==1) document.write("Jest to zła ocena")
+        if (zmienna==2) document.write("Jest to ocena dla ludzi bez ambicji")
+        if (zmienna==3) document.write("Jest to ocena dla przecietniakow")
+        if (zmienna==4) document.write("Jest to swietna ocena")
+        if (zmienna==5) document.write("Jest to wysoka ocena")
+        if (zmienna==6) document.write("Jest to oniryczna ocena")
+
+    zad 6
+          var a = prompt('Podaj a');
+          var b = prompt('Podaj b');
+
+          if(a%b == 0){
+            document.write('Liczba a jest podzielna przez b');
+          }
+          else {
+            document.write('Liczba a nie jest podzielna prze b')
+          }
+
+
+    zad 7
+        var zmienna = prompt("podaj wspolczynik a");
+        var zmienna1 = prompt("podaj wspolczynik b");
+        var zmienna2 = prompt("podaj wspolczynik c");
+
+        var delta =zmienna1*zmienna1-4*zmienna*zmienna2;
+        if (delta>=0)
+        {
+          if (delta==0)
+          {
+            var x0= -zmienna1/(2*zmienna);
+            document.write("twoje miejsce zerowe to : ")
+            document.write(x0);
+          }
+          else
+          {
+           var x1 = (-zmienna-Math.sqrt(delta)/(2*zmienna));
+           var x2 = (-zmienna+Math.sqrt(delta)/(2*zmienna));
+           document.write("twoje miejsca zerowe to : ")
+           document.write(x1);
+           document.write(" oraz ");
+           document.write(x2);
+          }
+        }
+        else
+        {
+          document.write("brak rozwiazan");
+        }
+
+    zad 8
+          var a = prompt('Podaj a');
+          var b = prompt('Podaj b');
+          var c = prompt('Podaj c');
+
+          var liczby = [a, b, c];
+          liczby.sort(function(a, b){return a-b});
+          document.write(liczby);
+
+
+    var a = prompt('<p>Podaj a</p>');
+
+
+
+    </script>
+  </body>
+</html>

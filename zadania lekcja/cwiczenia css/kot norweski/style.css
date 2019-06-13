@@ -1,0 +1,46 @@
+h1
+{
+  letter-spacing: 10pt;
+  color: blue;
+  text-shadow: red;
+}
+h2
+{
+color: purple;
+font: Georgia;
+font-style: italic;
+
+}
+header
+{
+  background-color: grey;
+
+}
+body
+{
+  background-color: #CCCCCC;
+  font-size: 15pt;
+}
+
+ul
+{
+  list-style-type: none;
+
+
+}
+
+li
+{
+display: inline;
+}
+footer
+{
+background-color: pink;
+font-size: 9pt;
+}
+
+#styl1
+{
+  font-family: sans-serif;
+  font-size: smaller;
+}
