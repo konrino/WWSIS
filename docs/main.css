@@ -1,0 +1,139 @@
+* {
+margin: 0;
+padding: 0;
+border: 0;
+line-height: 1.4em;
+vertical-align: baseline;
+text-decoration: none;
+outline: 0;
+box-sizing:border-box
+}
+body
+{
+	background-color: #fff;
+	color: #212121;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+}
+
+h1
+{
+	font-family: serif;
+	font-size: 38px;
+	font-weight: 400;
+	color: #212121;
+	margin: 20px;
+}
+
+.zdjecia
+{
+	text-align: center;
+}
+
+.zdjecia img
+{
+	width: 100%;
+	height: auto;
+
+}
+
+.zdjecia img:hover
+{
+	filter:grayscale(0);
+		transform: scale(1.1);
+}
+.zdjecia p
+{
+	margin-bottom: 30px;
+}
+
+.zdjecia figcaption
+{
+	margin-top: 30px;
+}
+
+.navbar
+{
+    background-color: #bd5d38;
+;
+    border-color: #424242;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+
+.formField{font: inherit; border: 1px solid #ccc; border-radius: 3px; margin: 3px 0 10px 0; padding: 3px 0}
+textarea.formField{width: 300px; height: 70px}
+#sendBtn{cursor:pointer;background: #ccc; background: linear-gradient(#ddd 0, #eee 100%); border: 1px solid #ccc; line-height: 32px; font-size: 14px;padding: 0 25px; border-radius: 3px}
+#send_form_status{border: 1px dashed #ccc;display: none; padding: 0 10px; margin: 10px 0}
+.status_ok{color: #060}
+.status_err{color: #F00};
+
+
+
+.container {
+
+  width: 299%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.skills {
+  text-align: center; /* Right-align text */
+  padding-top: 20px; /* Add top padding */
+  padding-bottom: 20px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 85%; background-color: #4CAF50;} /* Green */
+.css {width: 70%; background-color: #2196F3;} /* Blue */
+.js {width: 50%; background-color: #f44336;} /* Red */
+.php {width: 40%; background-color: #808080;} /* Dark Grey */
+
+.descriptionContainer{
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.title1 > span{
+    font-size: 65px;
+    font-weight: 700;
+}
+.title1{
+    margin: 0px;
+    width: 70%;
+}
+.title2{
+    color: #bb6125;
+    font-weight: 700;
+    font-size: 17.45px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+.title2 > a{
+    color: #bd5d38;
+    text-decoration: none;
+}
+.title2 > a:hover{
+    color: #343a40;
+}
+.description{
+    color: #524f4f;
+    font-weight: 400;
+    font-size: 16px;
+}
+.containerForIcons{
+    display: flex;
+    margin-top: 25px;
+    width: 325px;
+    margin-left: 4%;
+}
+.icon{
+    flex: 1;
+}
+.row{
+    width: 100%;
+}

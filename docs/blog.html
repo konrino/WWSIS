@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Portfolio</title>
+	<meta name="description" content="Blog o ładnych zdjęciach">
+	<meta name="keywords" content="Zdjęcia,fotografia,fotografie,tapety">
+	<meta name="author" content="Konrad Nowak">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<script>
+        function zegarek()
+        {
+            var data = new Date();
+            var godzina = data.getHours();
+            var minuta = data.getMinutes();
+            var sekunda = data.getSeconds();
+            var dzien = data.getDate();
+            var dzienN = data.getDay();
+            var miesiac = data.getMonth();
+            var rok = data.getFullYear();
+
+            if (minuta < 10) minuta = "0" + minuta;
+            if (sekunda < 10) sekunda = "0" + sekunda;
+
+            var dni = new Array("niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota");
+            var miesiace = new Array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia");
+
+            var pokazDate = "Dzisiaj jest " + dni[dzienN] + ', ' + dzien + ' ' + miesiace[miesiac] + ' ' + rok + " roku.<br />Godzina " + godzina + ':' + minuta + ':' + sekunda;
+            document.getElementById("zegar").innerHTML = pokazDate;
+
+            setTimeout(zegarek, 1000);
+        }
+    </script>
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-sm">
+      <a class="navbar-brand" href="index.html"> <i class="small material-icons">camera_alt</i> Fotka.pl </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="przełącznik nawigacji">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainmenu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+              </li>
+							<li class="nav-item">
+								<a class="nav-link" href="portfolio.html"> Portfolio </a>
+								</li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html"> About Me </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html"> Blog </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+    </nav>
+  </header>
+
+	<main>
+
+		      <body onload="zegarek()">
+
+
+
+		<section class="zdjecia">
+
+			<div class="container">
+
+				<header>
+
+					<h1>Blog Fotograficzny</h1>
+					<p>W tej sekcji mogą państwo zostawić swoje komentarze na temat mojej strony.</p>
+
+				</header>
+
+				<div class="row">
+
+					<div class="col-sm-12 col-md-6 offset-md-3">
+
+						<div class="card">
+  <div class="card-header">
+    12 dni temu
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Strona ta zmieniła moje podejście do fotografii.</p>
+      <footer class="blockquote-footer">Adrian Pełechaty <cite title="Source Title">ze Środy Śląskiej</cite></footer>
+    </blockquote>
+  </div>
+</div>
+<br>
+
+	<div class="card">
+		<div class="card-header">
+35 dni temu
+</div>
+<div class="card-body">
+<blockquote class="blockquote mb-0">
+<p>Piękne fotografie oby tak dalej!.</p>
+<footer class="blockquote-footer">Marcel Archutowski <cite title="Source Title">z Jeleniej Góry</cite></footer>
+</blockquote>
+</div>
+</div>
+<br>
+
+<div class="card">
+<div class="card-header">
+51 dni temu
+</div>
+<div class="card-body">
+<blockquote class="blockquote mb-0">
+<p>Widać że Pani pasją są te zdjęcia.Chcę zobaczyć więcej</p>
+<footer class="blockquote-footer">Kacper Piasecki <cite title="Source Title">z Wrocławia</cite></footer>
+</blockquote>
+</div>
+</div>
+
+				</div>
+
+			</div>
+
+
+
+		</section>
+
+
+
+	</main>
+    <footer>
+       <div style="border-top: 1px solid #524f4f; height: 10px; margin-top: 20px;"></div>
+       <div style="display: flex; width: 92%; margin: 0 auto; padding-top: 5px;">
+        <div id="zegar" style="color: #524f4f; flex: 1; font-size: 12px;"></div>
+            <div style="flex: 1;">
+               <p style=" color: #524f4f; font-size: 12px; text-align: right;">
+                   Autor:
+    <br>           Konrad Nowak
+               </p>
+            </div>
+        </div>
+    </footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
